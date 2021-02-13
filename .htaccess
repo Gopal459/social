@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /SocialPedia/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /SocialPedia/
+RewriteRule ^blog\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /SocialPedia/blog [L]
+</IfModule>
